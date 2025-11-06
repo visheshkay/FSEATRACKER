@@ -6,6 +6,8 @@ const mongoose = require('mongoose')
 const Grid = require('gridfs-stream')
 const path = require('path')
 app.use(exp.json())
+const cors = require('cors')          
+app.use(cors()) 
 
 mc.connect(process.env.DB_URL)
 .then(client=>{
